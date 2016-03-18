@@ -1,1 +1,76 @@
 
+package dadazuche;
+import java.util.Scanner;
+
+public class car {
+
+    String a=new String ("胖子");
+	String b=new String("弱鸡");
+	String c=new String ("壮汉");
+	
+	Scanner input = new Scanner(System.in);
+	Scanner pp = new Scanner(System.in);	
+	public int lei(){
+		int i=0;
+		System.out.println("请确定对手体型:\n"+a+" "+b+" "+c+" ");
+		String d=input.next();
+		if(a.equals(d))
+		{
+			i=1;
+		}
+		if(b.equals(d))
+		{
+			i=2;
+		}
+		if(c.equals(d))
+		{
+			i=3;
+		}
+		switch(i){
+		case 1:
+			System.out.println("你选择了胖子");break;
+		case 2:
+			System.out.println("你选择了弱鸡");break;
+		case 3:
+			System.out.println("你选择了壮汉");break;			
+		}
+		return i;//在这里返回1为选择了轿车返回2为选择了皮卡返回3为选择了卡车
+							
+	}
+
+	public void qian(int size,int day) {
+		int he=size*day;
+		System.out.println("共需要人民币： \n"+he);
+			
+	}
+	
+	public int cd(){
+		System.out.println("如果你想让对方尝尝我们的厉害，我们还提供了进阶服务：");
+		System.out.println("0.你怂你跳过\n1.打折一件胳膊或腿：+1000\n2.剁手：+3000\n3.内脏划破（捅刀子）+2500");	
+		int a=input.nextInt();
+		int r = 0;
+		switch (a){
+		case 0:r=0;break;
+		case 1:r=1000;break;
+		case 2:r=3000;break;
+		case 3:r=2500;break;
+		}
+		return r;
+	}
+	
+	
+/*	public int dy() {//返回租车时间
+		// TODO Auto-generated method stub
+		System.out.println("请输入租车时长：\n");
+		int d=input.nextInt();
+		return d;
+	}
+*/
+	public int size(){//返回租车数量
+		System.out.println("请输入对手数量：\n");
+		int shu=input.nextInt();
+		return shu;
+		}
+
+
+}
